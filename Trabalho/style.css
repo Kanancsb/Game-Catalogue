@@ -1,0 +1,30 @@
+body {
+    background-color: gray;
+  }
+  
+input[type="text"], input[type="password"], input[type="submit"], textarea {
+    background-color: lightgray;
+    border: 1px solid black;
+  }
+
+a{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.box {
+    border: 1px solid #000000;
+    padding: 8px;
+}
