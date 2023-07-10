@@ -16,6 +16,7 @@
         $title = ($_POST["title"]);
         $description = $_POST["description"];
 
+        // Insere o jogo no banco de dados
         if(!empty($title) && !empty($description)) {
             $insert_query = "INSERT INTO games (title, description) VALUES ('$title', '$description')";
             $mysqli->query($insert_query) or die("Falha na inserção do jogo: " . $mysqli->error);

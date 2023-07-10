@@ -4,6 +4,7 @@
 
     session_start();
 
+    //Sistema de Login
     if (isset($_POST['username']) && isset($_POST['password'])) {
         if (empty($_POST['username'])) {
             echo "Username error";
@@ -13,6 +14,7 @@
             $username = $mysqli->real_escape_string($_POST['username']);
             $password = $mysqli->real_escape_string($_POST['password']);
 
+            // Chama o banco de dados, para salvar o usuario e senha na sessão
             $sql_code = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
             $sql_query = $mysqli->query($sql_code) or die("Fail in the execution of SQL code" . $mysqli->error);
 
@@ -30,7 +32,7 @@
                     header("Location: home.php");
                     
             } else {
-                echo "Login fail!";
+                echo "Usuario ou senha errados!";
             }
         }
     }

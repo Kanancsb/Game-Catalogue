@@ -15,13 +15,14 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         
+        //Verifica se tem algum nome repetido no banco
         $query_user = "SELECT * FROM users WHERE username = '$username'";
         $result = $mysqli -> query($query_user);
 
         if(!empty($username) && !empty($password)){
             if($result -> num_rows > 0){
                 echo "Este usuario já existe! Tente outro.<br>";
-            }else{
+            }else{ // Se não houver um usuario repetido, cadastra o usuario e senha
                 $Insert_query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
                 $mysqli -> query($Insert_query) or die("Falha na inserção do usuario: " . $mysqli -> error);
 

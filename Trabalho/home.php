@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <?php if(isset($_SESSION['username'])): ?>
+    <?php if(isset($_SESSION['username'])): // Fiz está parte no HTML, pois estou mais familiarizado a utilizar o <a> do HTML?>
         <p>
             <a href="cadastrousuario.php">Cadastrar Usuário</a>
         </p>
         <p>
-            <a href="addgame.php">Adicionar mais jogos</a>
+            <a href="alterarsenha.php">Alterar Senha</a>
+        </p>
+        <p>
+            <a href="addgame.php">Adicionar jogos</a>
         </p>
         <p>
             <a href="AlterarJogos.php">Alterar Nome/Descrição</a>
